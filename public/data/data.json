@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "nombre": "CanFelix 10kg",
+    "precio": 12990,
+    "imagen": "https://arcencohogar.vtexassets.com/arquivos/ids/383528-800-800?v=638653772056430000&width=800&height=800&aspect=true",
+    "categoria": "alimento",
+    "stock": 15,
+    "descripcion": "Alimento balanceado para perros adultos de razas medianas y grandes, con ingredientes de alta calidad para una nutrición completa."
+  },
+  {
+    "id": 2,
+    "nombre": " Whiskas 3kg",
+    "precio": 7490,
+    "imagen": "https://acdn-us.mitiendanube.com/stores/003/210/212/products/diseno-sin-titulo-2024-02-13t114606-973-467e447636a724483a17078355741440-1024-1024.png",
+    "categoria": "alimento",
+    "stock": 22,
+    "descripcion": "Alimento para gatos adultos, con pollo y atún, en presentación de 3kg."
+  },
+  {
+    "id": 3,
+    "nombre": "Collar antitirones para perro",
+    "precio": 3690,
+    "imagen": "https://m.media-amazon.com/images/I/61ZY34JJmTL._AC_UF894,1000_QL80_.jpg",
+    "categoria": "accesorios",
+    "stock": 10,
+    "descripcion": "Collar antitirones para perros, diseñado para evitar tirones y mejorar el control durante los paseos."
+  },
+  {
+    "id": 4,
+    "nombre": "Juguete para gato con plumas",
+    "precio": 1290,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_610800-MLU73200353337_122023-O.webp",
+    "categoria": "juguetes",
+    "stock": 30,
+    "descripcion": "Juguete interactivo para gatos, con plumas y sonido, ideal para mantener a tu mascota activa y entretenida."
+
+  },
+  {
+    "id": 5,
+    "nombre": "Cama mediana para perro",
+    "precio": 9990,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_975472-MLA82379747518_022025-O.webp",
+    "categoria": "descanso",
+    "stock": 5,
+    "descripcion": "Cama mediana para perros, con diseño ergonómico y materiales de alta calidad para un descanso óptimo."
+  },
+  {
+    "id": 6,
+    "nombre": "Comedero  acero inoxidable",
+    "precio": 4590,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_907466-MLA75437224503_032024-O.webp",
+    "categoria": "accesorios",
+    "stock": 18,
+    "descripcion": "Comedero de acero inoxidable, resistente y fácil de limpiar."
+  }
+]
