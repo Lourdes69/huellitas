@@ -1,8 +1,11 @@
 
-import React from 'react'
+import React, { useContext } from 'react'
 import { useParams } from 'react-router-dom'
+import { CartContext } from './Context/CartContext';
 
-function DetallesProductos({ productos }) {
+function DetallesProductos() {
+
+  const { productos } = useContext(CartContext);
 
     const { id } = useParams();
 

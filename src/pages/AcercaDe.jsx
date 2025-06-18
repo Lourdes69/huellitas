@@ -2,10 +2,10 @@
 import React from 'react'
 import Header from '../Components/estaticos/Header'
 
-function AcercaDe({ cart, borrarDelCarrito }) {
+function AcercaDe() {
   return (
     <>
-    <Header cartItems={cart} borrarDelCarrito={borrarDelCarrito} />
+    <Header />
     <div>
       <h1>Acerca De</h1>
       <p>Esta es la sección Acerca De</p>

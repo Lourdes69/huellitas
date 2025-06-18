@@ -1,17 +1,19 @@
-
-import React from 'react'
+import { useContext } from 'react';
 import Header from "../Components/estaticos/Header"
 import Image from "../../public/imgheader.png"
 import ProductList from '../Components/ProductList'
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Category from '../Components/estaticos/Category';
 import Footer from '../Components/estaticos/Footer';
+import { CartContext } from '../Components/Context/CartContext';
 
 
-function Home({ cart, productos, cargando, agregarAlCarrito, borrarDelCarrito }) {
+
+function Home() {
+ const {  cargando, } = useContext(CartContext);
   return (
   <>
-      <Header cartItems={cart} borrarDelCarrito={borrarDelCarrito} />
+      <Header />
     
       <main className="relative bg-fixed bg-center bg-cover h-[535px] flex items-center justify-center text-center"
         style={{ backgroundImage: `url(${Image})` }}
@@ -25,7 +27,7 @@ function Home({ cart, productos, cargando, agregarAlCarrito, borrarDelCarrito })
       <Category />
       {
         cargando ? <AiOutlineLoading3Quarters /> :
-         <ProductList productos={productos} agregarAlCarrito={agregarAlCarrito} />
+         <ProductList />
       }
      <Footer />
       

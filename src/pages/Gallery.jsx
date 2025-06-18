@@ -1,10 +1,14 @@
 
-import React from 'react'
+import React, {useContext} from 'react'
 import Header from '../Components/estaticos/Header'
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import ProductList from '../Components/ProductList'
+import { CartContext } from '../Components/Context/CartContext';
 
-function Gallery({ productos, cargando, agregarAlCarrito }) {
+function Gallery() {
+
+  const{cargando} = useContext(CartContext)
+
   return (
     <>
       <Header />
@@ -12,7 +16,7 @@ function Gallery({ productos, cargando, agregarAlCarrito }) {
 
         {
           cargando ? <AiOutlineLoading3Quarters /> :
-            <ProductList productos={productos} agregarAlCarrito={agregarAlCarrito} />
+            <ProductList />
         }
 
       </div>

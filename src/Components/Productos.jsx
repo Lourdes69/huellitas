@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState,useContext } from 'react'
 import { FaCartArrowDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import { CartContext } from './Context/CartContext';
 
 
-function Productos({ producto, agregarAlCarrito }) {
+
+function Productos({ producto }) {
+
+  const { handleAddToCart } = useContext(CartContext);
+
 
   const [cantidad, setCantidad] = useState(1)
 
@@ -16,7 +21,7 @@ function Productos({ producto, agregarAlCarrito }) {
 
   const handleAgregar = () => {
     if (cantidad <= producto.stock && producto.stock > 0) {
-      agregarAlCarrito({ ...producto, cantidad })
+      handleAddToCart({ ...producto, cantidad })
       setCantidad(1) 
     }
   }
@@ -54,6 +59,7 @@ function Productos({ producto, agregarAlCarrito }) {
       {producto.stock === 0 && (
         <p className="text-red-600 mt-2">Sin stock</p>
       )}
+   
     </section>
     </>
   )
