@@ -1,29 +1,36 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useContext } from 'react'
 import Productos from './Productos'
 import { CartContext } from './Context/CartContext'
+import  "../App.css";
+import SeccionPromocional from './estaticos/SeccionPromocional';
+import Footer from './estaticos/Footer';
+import FiltroProductos from './FiltroProductos';
+import Valores from '../Components/Valores';
 
-function ProductList() {
+function ProductList({ limit, mostrarTitulo = true, mostrarFiltro = true, titulo = "Productos Destacados" }) {
+  const { productosFiltrados } = useContext(CartContext);
 
-  const { productos, busqueda, setBusqueda, productosFiltrados } = useContext(CartContext);
-
-  useEffect(() => {
-    console.log(productos)
-  }, [productos])
+  const productosAMostrar = limit ? productosFiltrados.slice(0, limit) : productosFiltrados;
 
   return (
-    <div>
-      <h1 className='text-slate-900 text-3xl px-4 mt-14 m-10'>Nuestros Productos</h1>
-      <input type="text"
-        placeholder='Buscar productos...'
-        value={busqueda}
-        onChange={e => setBusqueda(e.target.value)} />
-
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8'>
-        {productosFiltrados.map((producto) => (
-          <Productos key={producto.id} producto={producto} />
-        ))}
-      </div>
-    </div>
+    <>
+      <section className='mt-10 px-4 bg-[#f3f4f6] py-12'>
+        {mostrarFiltro && <FiltroProductos />}
+        <div className='mx-auto px-4 container'>
+          {mostrarTitulo && (
+            <h1 className='text-slate-900 text-3xl font-bold fuente-principal'>{titulo}</h1>
+          )}
+          <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8'>
+            {productosAMostrar.map((producto) => (
+              <Productos key={producto.id} producto={producto} />
+            ))}
+          </div>
+        </div>
+      </section>
+      <Valores />
+      <SeccionPromocional />
+      <Footer />
+    </>
   )
 }
 

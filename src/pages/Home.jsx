@@ -1,37 +1,47 @@
 import { useContext } from 'react';
 import Header from "../Components/estaticos/Header"
-import Image from "../../public/imgheader.png"
+import Image from "../../public/banner.png"
 import ProductList from '../Components/ProductList'
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Category from '../Components/estaticos/Category';
-import Footer from '../Components/estaticos/Footer';
 import { CartContext } from '../Components/Context/CartContext';
+import { Link } from 'react-router-dom';
+import "../App.css";
 
 
 
 function Home() {
- const {  cargando, } = useContext(CartContext);
+  const { cargando, } = useContext(CartContext);
   return (
-  <>
+    <>
       <Header />
-    
-      <main className="relative bg-fixed bg-center bg-cover h-[535px] flex items-center justify-center text-center"
+      <main
+        className="relative object-cover bg-fixed bg-center bg-cover h-[400px] md:h-[535px] flex items-center"
         style={{ backgroundImage: `url(${Image})` }}
       >
-        <div className="bg-white/70 p-6 rounded">
-          <h1 className="text-4xl font-bold text-black">Bienvenido a nuestra tienda</h1>
-          <p className="text-lg text-black mt-2">Tu mascota merece una vida llena de sabor y bienestar.</p>
-          <button className="mt-4 bg-orange-600 text-white py-2 px-4 rounded">Ver productos</button>
+        <div className="absolute inset-0 bg-black opacity-30 z-0"></div>
+        <div className="mx-4 mt-10 md:ml-16 md:mt-20 w-full md:w-1/2 z-10 relative">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-8 fuente-principal">
+            Todo para tus mejores amigos
+          </h1>
+          <p className="text-base md:text-xl text-white font-medium mt-2 w-full md:w-2/3 fuente-principal">
+            Encuentra todo lo que tu mascota necesita: alimentos premium, accesorios, juguetes y servicios de cuidado profesional.
+          </p>
+          <Link to="/productos">
+            <button className="mt-4 bg-orange-600 text-base md:text-xl text-white py-2 md:py-3 px-4 md:px-6 rounded-full fuente-principal transition-opacity hover:bg-[#d97706]">
+              Ver productos
+            </button>
+          </Link>
         </div>
       </main>
       <Category />
       {
         cargando ? <AiOutlineLoading3Quarters /> :
-         <ProductList />
+          <ProductList limit={4} mostrarTitulo={true} mostrarFiltro={false}/>
       }
-     <Footer />
       
-      </>
+
+    </>
 
   )
 }

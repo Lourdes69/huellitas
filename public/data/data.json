@@ -1,57 +1,79 @@
 [
   {
     "id": 1,
-    "nombre": "CanFelix 10kg",
+    "nombre": "Alimento Premiun para perros",
     "precio": 12990,
-    "imagen": "https://arcencohogar.vtexassets.com/arquivos/ids/383528-800-800?v=638653772056430000&width=800&height=800&aspect=true",
+    "imagen": "https://storage.googleapis.com/uxpilot-auth.appspot.com/eb297d154d-9dc86eda7efe3b6b7f5d.png",
     "categoria": "alimento",
     "stock": 15,
-    "descripcion": "Alimento balanceado para perros adultos de razas medianas y grandes, con ingredientes de alta calidad para una nutrición completa."
+    "descripcion": "Nutrición completa y balanceada "
   },
   {
     "id": 2,
-    "nombre": " Whiskas 3kg",
+    "nombre": " Cama Ortopédica",
     "precio": 7490,
-    "imagen": "https://acdn-us.mitiendanube.com/stores/003/210/212/products/diseno-sin-titulo-2024-02-13t114606-973-467e447636a724483a17078355741440-1024-1024.png",
-    "categoria": "alimento",
+    "imagen": "https://storage.googleapis.com/uxpilot-auth.appspot.com/d769c00b02-016f03adb568d9926172.png",
+    "categoria": "accesorio",
     "stock": 22,
-    "descripcion": "Alimento para gatos adultos, con pollo y atún, en presentación de 3kg."
+    "descripcion": "Máximo confort para tu mascota"
   },
   {
     "id": 3,
-    "nombre": "Collar antitirones para perro",
+    "nombre": "Comida para Gatos",
     "precio": 3690,
-    "imagen": "https://m.media-amazon.com/images/I/61ZY34JJmTL._AC_UF894,1000_QL80_.jpg",
-    "categoria": "accesorios",
+    "imagen": "https://storage.googleapis.com/uxpilot-auth.appspot.com/69dd9d0b42-189380301b74a0b1b346.png",
+    "categoria": "alimento",
     "stock": 10,
-    "descripcion": "Collar antitirones para perros, diseñado para evitar tirones y mejorar el control durante los paseos."
+    "descripcion": "Paté de salmón para gatos adultos"
   },
   {
     "id": 4,
-    "nombre": "Juguete para gato con plumas",
+    "nombre": "Set de Juguetes",
     "precio": 1290,
-    "imagen": "https://http2.mlstatic.com/D_NQ_NP_610800-MLU73200353337_122023-O.webp",
+    "imagen": "https://storage.googleapis.com/uxpilot-auth.appspot.com/e78e2a42e5-6ee19e54012063347c1c.png",
     "categoria": "juguetes",
     "stock": 30,
-    "descripcion": "Juguete interactivo para gatos, con plumas y sonido, ideal para mantener a tu mascota activa y entretenida."
+    "descripcion": "Cuerda y pelota para entretenimiento"
 
   },
   {
     "id": 5,
-    "nombre": "Cama mediana para perro",
+    "nombre": "Comida Premiun",
     "precio": 9990,
-    "imagen": "https://http2.mlstatic.com/D_NQ_NP_975472-MLA82379747518_022025-O.webp",
-    "categoria": "descanso",
+    "imagen": "https://storage.googleapis.com/uxpilot-auth.appspot.com/fafba6ab6e-874e8230457f3b3cadf6.png",
+    "categoria": "alimento",
     "stock": 5,
-    "descripcion": "Cama mediana para perros, con diseño ergonómico y materiales de alta calidad para un descanso óptimo."
+    "descripcion": "Alimento balanceado para perros adultos"
   },
   {
     "id": 6,
-    "nombre": "Comedero  acero inoxidable",
+    "nombre": "Snacks de Salmón",
     "precio": 4590,
-    "imagen": "https://http2.mlstatic.com/D_NQ_NP_907466-MLA75437224503_032024-O.webp",
+    "imagen": "https://storage.googleapis.com/uxpilot-auth.appspot.com/c3149e236c-a0cd10de7ecefb3a9b6b.png",
+    "categoria": "alimento",
+    "stock": 18,
+    "descripcion": "Premios saludables sabor salmón"
+
+  },
+  {
+    "id": 7,
+    "nombre": "Collar de Cuero Premium",
+    "precio": 4590,
+    "imagen": "https://storage.googleapis.com/uxpilot-auth.appspot.com/2ba3002fb8-bc3013f6524dc0f22b58.png",
     "categoria": "accesorios",
     "stock": 18,
-    "descripcion": "Comedero de acero inoxidable, resistente y fácil de limpiar."
+    "descripcion": "Collar ajustable para perros medianos"
+
+  },
+  {
+    "id": 8,
+    "nombre": "Caja de Arena Moderna",
+    "precio": 4590,
+    "imagen": "https://storage.googleapis.com/uxpilot-auth.appspot.com/faed05765f-04d3eb7e120d1539c1c3.png",
+    "categoria": "accesorios",
+    "stock": 18,
+    "descripcion": "Caja higiénica con tapa removible"
+
   }
+
 ]

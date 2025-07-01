@@ -1,4 +1,3 @@
-
 import { createContext, useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 
@@ -12,6 +11,7 @@ export const CartProvider = ({ children }) => {
     const [error, setError] = useState(null)
     const [isAuthenticated, setIsAuthenticated] = useState(false)
     const [busqueda, setBusqueda] = useState("");
+    const [categoria, setCategoria] = useState("Todos"); 
 
     useEffect(() => {
         fetch("/data/data.json")
@@ -26,10 +26,12 @@ export const CartProvider = ({ children }) => {
                 setError(true)
             })
     }, [])
-
-    const productosFiltrados = busqueda
-        ? productos.filter(producto => producto.nombre.toLowerCase().includes(busqueda.toLowerCase()))
-        : productos;
+    
+     const productosFiltrados = productos.filter(producto => {
+        const coincideBusqueda = producto.nombre.toLowerCase().includes(busqueda.toLowerCase());
+        const coincideCategoria = categoria === "Todos" || producto.categoria === categoria;
+        return coincideBusqueda && coincideCategoria;
+    });
 
     const handleAddToCart = (producto) => {
         const productInCart = cart.find((item) => item.id === producto.id)
@@ -68,6 +70,26 @@ export const CartProvider = ({ children }) => {
         })
     };
 
+    const handleIncreaseQuantity = (id) => {
+        setCart(prevCart =>
+            prevCart.map(item =>
+                item.id === id
+                    ? { ...item, cantidad: Math.min(item.cantidad + 1, item.stock) }
+                    : item
+            )
+        );
+    };
+
+    const handleDecreaseQuantity = (id) => {
+        setCart(prevCart =>
+            prevCart.map(item =>
+                item.id === id
+                    ? { ...item, cantidad: item.cantidad - 1 }
+                    : item
+            ).filter(item => item.cantidad > 0)
+        );
+    };
+
     return (
 
         <CartContext.Provider value={
@@ -79,10 +101,14 @@ export const CartProvider = ({ children }) => {
                 isAuthenticated,
                 handleAddToCart,
                 handleRemoveFromCart,
+                handleIncreaseQuantity, 
+                handleDecreaseQuantity, 
                 setIsAuthenticated,
                 setBusqueda,
                 productosFiltrados,
-                busqueda
+                busqueda,
+                categoria,
+                setCategoria    
             }
         }>
             {children}

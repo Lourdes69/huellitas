@@ -1,11 +1,11 @@
 [
   {
-    "email": "admin@example.com",
+    "email": "admin@gmail.com",
     "password": "admin123",
     "role": "admin"
   },
   {
-    "email": "cliente@example.com",
+    "email": "cliente@gmail.com",
     "password": "cliente123",
     "role": "cliente"
   }

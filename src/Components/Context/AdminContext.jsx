@@ -1,4 +1,3 @@
-
 import { createContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
@@ -62,6 +61,8 @@ export const AdminProvider = ({ children }) => {
                 icon: "success"
             });
             cargarProductos();
+            setOpen(false);
+            setSeleccionado(null);
         } catch (error) {
             console.error("Error al agregar producto:", error);
         }
@@ -82,7 +83,11 @@ export const AdminProvider = ({ children }) => {
             }
 
             const data = await respuesta.json();
-            alert("Producto actualizado exitosamente");
+           Swal.fire({
+                    title: ":(!",
+                    text: "Producto actualizado exitosamente!",
+                    icon: "success"
+                });
             setOpenEditor(false);
             setSeleccionado(null);
             cargarProductos();
@@ -92,8 +97,18 @@ export const AdminProvider = ({ children }) => {
     };
 
     const eliminarProducto = async (id) => {
-        const confirmar = window.confirm("¿Estás seguro de que deseas eliminar este producto?");
-        if (confirmar) {
+        const result = await Swal.fire({
+            title: "¿Estás seguro?",
+            text: "¿Estás seguro de que deseas eliminar este producto?",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Sí, eliminar",
+            cancelButtonText: "Cancelar"
+        });
+
+        if (result.isConfirmed) {
             try {
                 const respuesta = await fetch(`https://684c7334ed2578be881ed91b.mockapi.io/ecommerce/productos/${id}`, {
                     method: "DELETE"
@@ -103,9 +118,9 @@ export const AdminProvider = ({ children }) => {
                     throw Error("Error al eliminar producto")
                 }
                 Swal.fire({
-                    title: ":(!",
+                    title: "¡Eliminado!",
                     text: "Producto eliminado exitosamente!",
-                    icon: "error"
+                    icon: "success"
                 });
                 cargarProductos();
 
