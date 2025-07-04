@@ -48,7 +48,7 @@ function Login() {
           <p className='text-center mb-6'>Inicia sesión en tu cuenta</p>
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="" className=''>Email</label>
+              <label>Email</label>
               <input
                 type="email"
                 placeholder="tu@email.com"
@@ -59,7 +59,7 @@ function Login() {
               {error.email && <span className="text-red-600 text-sm">{error.email}</span>}
             </div>
             <div>
-              <label htmlFor="" className=''>Contraseña</label>
+              <label>Contraseña</label>
               <input
                 type="password"
                 placeholder="Tu contraseña"

@@ -16,19 +16,19 @@ function Home() {
     <>
       <Header />
       <main
-        className="relative object-cover bg-fixed bg-center bg-cover h-[400px] md:h-[535px] flex items-center"
+        className="relative object-cover bg-fixed bg-center bg-cover h-[300px] sm:h-[400px] md:h-[535px] flex items-center"
         style={{ backgroundImage: `url(${Image})` }}
       >
-        <div className="absolute inset-0 bg-black opacity-30 z-0"></div>
-        <div className="mx-4 mt-10 md:ml-16 md:mt-20 w-full md:w-1/2 z-10 relative">
-          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-8 fuente-principal">
+        <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
+        <div className="mx-2 mt-6 sm:mx-4 sm:mt-10 md:ml-16 md:mt-20 w-full sm:w-4/5 md:w-1/2 z-10 relative">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-3 sm:mb-4 md:mb-8 fuente-principal">
             Todo para tus mejores amigos
           </h1>
-          <p className="text-base md:text-xl text-white font-medium mt-2 w-full md:w-2/3 fuente-principal">
+          <p className="text-sm sm:text-base md:text-xl text-white font-medium mt-2 w-full sm:w-3/4 md:w-2/3 fuente-principal">
             Encuentra todo lo que tu mascota necesita: alimentos premium, accesorios, juguetes y servicios de cuidado profesional.
           </p>
           <Link to="/productos">
-            <button className="mt-4 bg-orange-600 text-base md:text-xl text-white py-2 md:py-3 px-4 md:px-6 rounded-full fuente-principal transition-opacity hover:bg-[#d97706]">
+            <button className="mt-4 bg-orange-600 text-sm sm:text-base md:text-xl text-white py-2 sm:py-2.5 md:py-3 px-4 sm:px-5 md:px-6 rounded-full fuente-principal transition-opacity hover:bg-[#d97706] w-full sm:w-auto">
               Ver productos
             </button>
           </Link>

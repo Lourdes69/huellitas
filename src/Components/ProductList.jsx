@@ -5,7 +5,7 @@ import  "../App.css";
 import SeccionPromocional from './estaticos/SeccionPromocional';
 import Footer from './estaticos/Footer';
 import FiltroProductos from './FiltroProductos';
-import Valores from '../Components/Valores';
+import Testimonials from './Testimonials';
 
 function ProductList({ limit, mostrarTitulo = true, mostrarFiltro = true, titulo = "Productos Destacados" }) {
   const { productosFiltrados } = useContext(CartContext);
@@ -27,7 +27,7 @@ function ProductList({ limit, mostrarTitulo = true, mostrarFiltro = true, titulo
           </div>
         </div>
       </section>
-      <Valores />
+      <Testimonials />
       <SeccionPromocional />
       <Footer />
     </>
