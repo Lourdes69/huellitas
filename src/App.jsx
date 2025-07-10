@@ -8,6 +8,7 @@ import Contacto from './pages/Contacto'
 import DetallesProductos from './Components/DetallesProductos'
 import Admi from './pages/Admin'
 import Login from './pages/Login'
+import Register from './pages/Register'
 import RutaProtegida from './auth/RutaProtegidas'
 import NotFound from './pages/NotFound'
 import { CartContext } from './Components/Context/CartContext'
@@ -36,6 +37,7 @@ function App() {
           }
         />
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
 

@@ -30,6 +30,10 @@ git clone https://github.com/Lourdes69/huellitas-shop.git
 
 npm install
 
+npm run dev
+
+
+
 
 ---
 

@@ -1,5 +1,5 @@
 import React, { } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../Components/Context/AuthContext'
 import { FaGoogle, FaFacebookF, FaRegHeart, FaRegWindowClose } from 'react-icons/fa'
 import { BsFillStarFill } from 'react-icons/bs'
@@ -80,19 +80,19 @@ function Login() {
               Iniciar Sesión
             </button>
             <div className="text-center text-sm mt-2">
-              ¿No tienes cuenta? <a href="#" className="text-orange-500 hover:underline">Regístrate aquí</a>
+              ¿No tienes cuenta? <Link to="/register" className="text-orange-500 hover:underline">Regístrate aquí</Link>
             </div>
             <div className="flex items-center gap-2 mt-4">
               <div className="flex-1 h-px bg-gray-300"></div>
               <span className="text-sm text-gray-500">O continúa con</span>
               <div className="flex-1 h-px bg-gray-300"></div>
             </div>
-            <div className="flex gap-4 mt-2">
-              <button className="flex items-center justify-center gap-2 w-1/2 py-2 border border-gray-300 rounded-lg hover:bg-gray-100">
+            <div className="flex gap-4 mt-2 justify-center">
+              <button
+                type="button"
+                className="flex items-center justify-center gap-2 w-2/3 py-2 border border-gray-300 rounded-lg hover:bg-gray-100"
+              >
                 <FaGoogle /> Google
-              </button>
-              <button className="flex items-center justify-center gap-2 w-1/2 py-2 border border-gray-300 rounded-lg hover:bg-gray-100">
-                <FaFacebookF /> Facebook
               </button>
             </div>
           </form>
