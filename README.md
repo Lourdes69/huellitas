@@ -1,12 +1,46 @@
-# React + Vite
+# 🐾 Huellitas Shop – Tienda de Mascotas en React JS + Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Huellitas Shop** es una plantilla moderna y responsiva desarrollada con **React JS** y **Tailwind CSS**, ideal para tiendas de mascotas, productos para animales, veterinarias o emprendimientos similares.
 
-Currently, two official plugins are available:
+🔗 **Demo en vivo:** [huellitasshop.netlify.app](https://huellitasshop.netlify.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ⚛️ React JS (Vite)
+- 🎨 Tailwind CSS
+- 🖼️ HTML5 + CSS3 (JSX)
+- 🌐 Responsive Design
+- ☁️ Deploy en Netlify
+
+---
+
+## 📁 Estructura del proyecto
+
+
+---
+
+## 🛠️ Instalación local
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/Lourdes69/huellitas-shop.git
+
+npm install
+
+
+---
+
+## 🧾 Licencia y uso
+
+Este producto está disponible para uso comercial. Las imágenes incluidas son libres de derechos o de uso propio. Se prohíbe su redistribución no autorizada fuera de la plataforma de TemplateMonster.
+
+---
+
+## 📧 Soporte
+
+Si tienes dudas o inconvenientes, puedes contactarme a:
+📩 lourdesdev7@gmail.com  
+GitHub: https://github.com/Lourdes69
