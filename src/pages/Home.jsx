@@ -28,7 +28,7 @@ function Home() {
             Encuentra todo lo que tu mascota necesita: alimentos premium, accesorios, juguetes y servicios de cuidado profesional.
           </p>
           <Link to="/productos">
-            <button className="mt-10 sm:mt-14 md:mt-12 bg-orange-600 text-lg sm:text-base md:text-xl text-white py-5 sm:py-6 md:py-4 px-3 sm:px-4 md:px-6 rounded-full fuente-principal transition-opacity hover:bg-[#d97706] w-2/4 sm:w-2/4 md:w-1/3">
+            <button className="mt-10 sm:mt-14 md:mt-12 bg-orange-600  text-base sm:text-base md:text-xl text-white  py-4 sm:py-6 md:py-4  px-4 sm:px-4 md:px-6  rounded-full fuente-principal  transition-opacity hover:bg-[#d97706]  w-3/4 sm:w-2/4 md:w-1/3">
               Ver productos
             </button>
           </Link>
@@ -37,9 +37,9 @@ function Home() {
       <Category />
       {
         cargando ? <AiOutlineLoading3Quarters /> :
-          <ProductList limit={4} mostrarTitulo={true} mostrarFiltro={false}/>
+          <ProductList limit={4} mostrarTitulo={true} mostrarFiltro={false} />
       }
-      
+
 
     </>
 
