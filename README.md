@@ -37,10 +37,6 @@ npm run dev
 
 ---
 
-## 🧾 Licencia y uso
-
-Este producto está disponible para uso comercial. Las imágenes incluidas son libres de derechos o de uso propio. Se prohíbe su redistribución no autorizada fuera de la plataforma de TemplateMonster.
-
 ---
 
 ## 📧 Soporte

@@ -7,7 +7,7 @@ function Cart({ isCartOpen, onClose, }) {
   const { cart, handleRemoveFromCart, handleIncreaseQuantity, handleDecreaseQuantity } = useContext(CartContext);
 
   return (
-    <div className={`cart-drawer ${isCartOpen ? 'open' : ''}`}>
+    <div className={`cart-drawer  ${isCartOpen ? 'open' : ''}`}>
       <div className="cart-header">
         <div className='flex items-center gap-2'>
           <FaCartArrowDown size={22} className='text-orange-500' />
@@ -61,7 +61,7 @@ function Cart({ isCartOpen, onClose, }) {
           <div className=''>
             <FaRegCreditCard size={20} color='white' />
             <button
-              className={`bg-orange-500 text-white py-3 px-4 rounded-xl w-full font-semibold text-lg transition-opacity duration-200 ${cart.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+              className={`bg-orange-500 text-white py-3 px-4 -z-0 rounded-xl w-full font-semibold text-lg transition-opacity duration-200 ${cart.length === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
               disabled={cart.length === 0}
             >
               Finalizar Compra

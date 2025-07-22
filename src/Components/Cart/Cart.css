@@ -13,7 +13,7 @@
 
 .cart-drawer.open {
   transform: translateX(0);
-  z-index: 2;
+  z-index: 40;
 }
 
 .cart-header {

@@ -14,10 +14,10 @@ function Login() {
   const { email, setEmail, password, setPassword, error, handleSubmit } = useAuth()
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-orange-50 px-4">
+    <div className="min-h-screen flex items-center justify-center bg-orange-50 px-4 py-6 sm:py-8">
       <div className="flex flex-col md:flex-row w-full max-w-5xl bg-white rounded-3xl shadow-lg overflow-hidden">
         <button
-          className="absolute top-4 right-6 text-orange-400 hover:text-orange-700 text-2xl font-bold z-10"
+          className="absolute top-4  right-6 text-orange-400 hover:text-orange-700 text-2xl font-bold z-10"
           onClick={() => navigate('/')}
           aria-label="Cerrar"
         >
